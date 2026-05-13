@@ -32,7 +32,7 @@ end
 // Counter to make LED signal
 //----------------------------
 reg [2:0] counter_led; //1ed用レジスタBGRの順になっている(0点灯，1消灯)
-reg direction;　//ledがどちらにシフトしているかを表すフラグ(0左，1右)
+reg direction; //ledがどちらにシフトしているかを表すフラグ(0左，1右)
 
 //
 always @(posedge clk, negedge res_n) //clkが立ち上がったとき，またはres_nが立ち下がったときに実行される
