@@ -29,7 +29,7 @@ reg direction;
 
 always(posedge clk, negedge res_n);
 begin
-	if(res_n)
+	if(res_n)//res_nは立ち下がりは0なので~で反転させる
 	begin
 		counter_led <= 3'b001;
 		direction <= 1'b0;
@@ -64,3 +64,4 @@ begin
 end
 
 assign counter_led = ~counter_led; //代入先はled
+//endmoduleわすれてる
